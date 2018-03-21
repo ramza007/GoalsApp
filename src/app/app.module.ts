@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: "goals", component: GoalComponent },
   { path: "about", component: AboutComponent },
   { path: "", redirectTo: "/goals", pathMatch: "full" },
+  { path: 'goals/:id', component: GoalDetailsComponent },
   { path: '**', component: NotFoundComponent }
 ]
 import { RoutingModule } from './routing/routing.module'
@@ -47,7 +48,7 @@ import { RoutingModule } from './routing/routing.module'
     NgProgressHttpModule,
 
   ],
-  
+
   providers: [AlertsService], // Add service to providers
   bootstrap: [AppComponent]
 })
