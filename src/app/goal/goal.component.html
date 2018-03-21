@@ -12,15 +12,13 @@
     </blockquote>
   </div>
 </div>
-<body style="padding-left: 500px">
   <div class="container">
 
     <div>
       <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
     </div>
-
   </div>
-</body>
+
   <div class="container">
     <div *ngFor="let goal of goals;let i = 'index'">
       <div>
@@ -36,4 +34,4 @@
 
   </div>
 
-  <p *ngIf='goals.length > 5'>You have too many goals</p>
+  <p style="padding-left:250px" *ngIf='goals.length > 5'>You have too many goals</p>
